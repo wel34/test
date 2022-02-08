@@ -1,1 +1,45 @@
+<style>
+.div_wrap{
+        position: relative;
+        width: 300px;
+        height: 40px;
+        margin-top: 40px;
+}
+.select{
+        position: absolute;
+        width: 300px;
+        height: 40px;
+}
+/* Вид Placeholder */
+.label{
+        width: 100px;
+        height: 40px;
+        padding: 8px;
+        text-align: center;
+        position: absolute;
+        pointer-events: none;
+        color: #687a86;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 16px;
+        top: 0px;
+        transition: 0.8s;
+}
+/* Здесь то что будет происходить с Placeholder'ом после изменения select */
+    .select:valid+.label {
+        color: black;
+        top: -35px;
+        width: 300px;
 
+    }
+</style>
+
+<div class="div_wrap">
+            <select required class="select">
+            <option>selected value=""</option>
+<option selected value="1">Пункт 1</option>
+<option selected value="2">Пункт 2</option>
+<option selected value="3">Пункт 3</option>
+</select>
+            <label class="label">Ваш Выбор:</label>
+        </div>
